@@ -1,0 +1,41 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/aasha/karina_ws/devel/include/**",
+        "/home/aasha/catkin_ws/devel/include/**",
+        "/home/aasha/aasha/igvc_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/aasha/karina_ws/src/Karina/igvc_nav/aasha_wayfinder/include/**",
+        "/home/aasha/aasha/igvc_ws/src/igvc_nav/modified-dwa/include/**",
+        "/home/aasha/karina_ws/src/Karina/igvc_simulation/hector_gazebo_plugins/include/**",
+        "/home/aasha/karina_ws/src/Karina/base/hoverboard-driver/include/**",
+        "/home/aasha/karina_ws/src/laser_filters/include/**",
+        "/home/aasha/catkin_ws/src/3DLidarLaneDetection_Capstone/include/**",
+        "/home/aasha/karina_ws/src/Karina/igvc_nav/practical_motion_ros/practical_waypoint_follow/include/**",
+        "/home/aasha/karina_ws/src/Karina/igvc_simulation/realsense-ros/realsense_gazebo_plugin/include/**",
+        "/home/aasha/karina_ws/src/Karina/base/wsu_ros/ros_arduino/include/**",
+        "/home/aasha/aasha/igvc_ws/src/igvc_localization/ntrip_ros/include/**",
+        "/home/aasha/aasha/igvc_ws/src/igvc_nav/subsumption-wayfinder/include/**",
+        "/home/aasha/catkin_ws/src/turtlebot3/turtlebot3_slam/include/**",
+        "/home/aasha/karina_ws/src/Karina/velodyne/velodyne_driver/include/**",
+        "/home/aasha/karina_ws/src/Karina/igvc_simulation/velodyne_simulator/velodyne_gazebo_plugins/include/**",
+        "/home/aasha/karina_ws/src/Karina/velodyne/velodyne_laserscan/include/**",
+        "/home/aasha/karina_ws/src/Karina/velodyne/velodyne_pcl/include/**",
+        "/home/aasha/karina_ws/src/Karina/velodyne/velodyne_pointcloud/include/**",
+        "/home/aasha/karina_ws/src/zed-ros-wrapper/zed-ros-interfaces/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
