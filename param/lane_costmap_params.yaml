@@ -21,7 +21,7 @@ height: 8.0
 origin_x: -1.0
 origin_y: -2.0
 resolution: 0.1
-update_frequency: 10
+update_frequency: 15
 publish_frequency: 10
 transform_tolerance: 0.5
 always_send_full_costmap: true

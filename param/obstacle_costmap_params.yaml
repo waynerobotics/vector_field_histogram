@@ -26,7 +26,7 @@ publish_frequency: 10
 transform_tolerance: 0.5
 always_send_full_costmap: true
 rolling_window: true
-inflation_radius: 2
+inflation_radius: 1
 cost_scaling_factor: 1
 
 plugins:
