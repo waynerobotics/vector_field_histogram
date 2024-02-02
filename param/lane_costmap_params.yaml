@@ -26,7 +26,7 @@ publish_frequency: 10
 transform_tolerance: 0.5
 always_send_full_costmap: true
 rolling_window: true
-inflation_radius: 0.05
+inflation_radius: 0.1
 cost_scaling_factor: 1
 
 plugins:
@@ -54,7 +54,7 @@ obstacle_layer:
             topic: /img_to_laser/lane_scan,
             marking: true,
             clearing: true,
-            observation_persistence: 0,
+            observation_persistence: 60,
             obstacle_range: 4.0,
             raytrace_range: 8.0,
             min_obstacle_height: 0.0,
