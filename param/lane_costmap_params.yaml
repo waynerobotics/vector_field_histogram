@@ -34,7 +34,7 @@ plugins:
     - { name: inflation_layer, type: "costmap_2d::InflationLayer" }
 
 obstacle_layer:
-    observation_sources: scan2
+    observation_sources: scan2 scan3 scan4
     # scan1: {
     #   # velodyne in sim
     #   sensor_frame: velodyne,
@@ -49,14 +49,40 @@ obstacle_layer:
     #   inf_is_valid: true}
     scan2:
         {
-            sensor_frame: lane_scan_frame,
+            sensor_frame: base_right_cam_tf,
             data_type: LaserScan,
-            topic: /img_to_laser/lane_scan,
+            topic: /img_to_laser_right/lane_scan_right,
             marking: true,
             clearing: true,
             observation_persistence: 60,
             obstacle_range: 4.0,
             raytrace_range: 8.0,
             min_obstacle_height: 0.0,
-            inf_is_valid: true,
+            inf_is_valid: false,
+        }
+    scan3:
+        {
+            sensor_frame: base_left_cam_tf,
+            data_type: LaserScan,
+            topic: /img_to_laser_left/lane_scan_left,
+            marking: true,
+            clearing: true,
+            observation_persistence: 60,
+            obstacle_range: 4.0,
+            raytrace_range: 8.0,
+            min_obstacle_height: 0.0,
+            inf_is_valid: false,
+        }
+    scan4:
+        {
+            sensor_frame: base_right_cam_tf,
+            data_type: LaserScan,
+            topic: /img_to_laser_mid/lane_scan_mid,
+            marking: true,
+            clearing: true,
+            observation_persistence: 60,
+            obstacle_range: 4.0,
+            raytrace_range: 8.0,
+            min_obstacle_height: 0.0,
+            inf_is_valid: false,
         }

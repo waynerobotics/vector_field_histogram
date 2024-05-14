@@ -15,16 +15,16 @@ class VFH:
         #Get parameters
 
         #VFH weights
-        self.wg = rospy.get_param('/vfh/wg',10)
-        self.wo = rospy.get_param('/vfh/wo',7)
+        self.wg = rospy.get_param('/vfh/wg',5)
+        self.wo = rospy.get_param('/vfh/wo',15)
         self.wd = rospy.get_param('/vfh/wd',1)
 
         #Lookahead distance
-        self.LA = rospy.get_param('/vfh/LA',15)
+        self.LA = rospy.get_param('/vfh/LA',30)
         #VFH critical cost
-        self.crit_cost = rospy.get_param('/vfh/crit_cost',60)
+        self.crit_cost = rospy.get_param('/vfh/crit_cost',15)
         #Costmap size
-        self.l = rospy.get_param('/costmap_2d/costmap/width',4)
+        self.l = rospy.get_param('/costmap_2d/costmap/width',8)
         #Get local costmap resolution
         self.ds = rospy.get_param('/costmap_2d/costmap/resolution',0.1)
 
@@ -34,7 +34,7 @@ class VFH:
         print(self.ncm)
 
         #Angle discretization
-        self.ndpsi = rospy.get_param('/vfh/ndpsi',72)
+        self.ndpsi = rospy.get_param('/vfh/ndpsi',180)
 
         #Get goal
         self.xG = np.array([42,-36])
@@ -48,7 +48,9 @@ class VFH:
         self.xyvfh0 = self.xR0
 
         #Define subscriber to odom
-        self.odom_sub = rospy.Subscriber("/odom",Odometry,self.robot_pose)
+        # self.odom_sub = rospy.Subscriber("/odom",Odometry,self.robot_pose)
+        self.odom_sub = rospy.Subscriber("/filtered_odom",Odometry,self.robot_pose)
+        
         #Define flag
         self.fodom = False
 
@@ -56,7 +58,10 @@ class VFH:
         # self.local_costmap_sub = rospy.Subscriber("/costmap_2d/costmap/costmap_updates",
         # OccupancyGridUpdate,self.local_costmap)
 
-        self.local_costmap_sub = rospy.Subscriber("/costmap_2d/costmap/costmap",
+        # SWAP TO COMPOSITE COSTMAP #
+        # self.local_costmap_sub = rospy.Subscriber("/costmap_2d/costmap/costmap",
+        # OccupancyGrid,self.local_costmap)        
+        self.local_costmap_sub = rospy.Subscriber("/composite_costmap/costmap/costmap",
         OccupancyGrid,self.local_costmap)
 
         #Define flag 
@@ -99,6 +104,7 @@ class VFH:
 
         #Collect costmap
         ODcp = np.array(self.local_cost)
+        print(ODcp)
 
         #Collect critical cost
         crit_cost = self.crit_cost

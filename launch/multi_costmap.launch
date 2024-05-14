@@ -7,7 +7,7 @@
         <rosparam command="load" file="$(find vector_field_histogram)/param/obstacle_costmap_params.yaml" ns="/obstacle_costmap/costmap"/>
     </node>
 
-    <!-- Start costmap node for lanes -->
+    <!-- Start costmap node for left lane -->
     <node pkg="costmap_2d" type="costmap_2d_node" name="lane_costmap" output="screen">
         <rosparam command="load" file="$(find vector_field_histogram)/param/lane_costmap_params.yaml" ns="/lane_costmap/costmap"/>
     </node>
