@@ -21,7 +21,7 @@ height: 8.0
 origin_x: -1.0
 origin_y: -2.0
 resolution: 0.1
-update_frequency: 15
+update_frequency: 10
 publish_frequency: 10
 transform_tolerance: 0.5
 always_send_full_costmap: true
@@ -47,42 +47,42 @@ obstacle_layer:
     #   raytrace_range: 4,
     #   min_obstacle_height: 0.0,
     #   inf_is_valid: true}
-    scan2:
-        {
-            sensor_frame: base_right_cam_tf,
-            data_type: LaserScan,
-            topic: /img_to_laser_right/lane_scan_right,
-            marking: true,
-            clearing: true,
-            observation_persistence: 60,
-            obstacle_range: 4.0,
-            raytrace_range: 8.0,
-            min_obstacle_height: 0.0,
-            inf_is_valid: false,
-        }
-    scan3:
-        {
-            sensor_frame: base_left_cam_tf,
-            data_type: LaserScan,
-            topic: /img_to_laser_left/lane_scan_left,
-            marking: true,
-            clearing: true,
-            observation_persistence: 60,
-            obstacle_range: 4.0,
-            raytrace_range: 8.0,
-            min_obstacle_height: 0.0,
-            inf_is_valid: false,
-        }
-    scan4:
-        {
-            sensor_frame: base_right_cam_tf,
-            data_type: LaserScan,
-            topic: /img_to_laser_mid/lane_scan_mid,
-            marking: true,
-            clearing: true,
-            observation_persistence: 60,
-            obstacle_range: 4.0,
-            raytrace_range: 8.0,
-            min_obstacle_height: 0.0,
-            inf_is_valid: false,
-        }
+    # scan2:
+    #     {
+    #         sensor_frame: base_right_cam_tf,
+    #         data_type: LaserScan,
+    #         topic: /img_to_laser_right/lane_scan_right,
+    #         marking: true,
+    #         clearing: true,
+    #         observation_persistence: 60,
+    #         obstacle_range: 4.0,
+    #         raytrace_range: 8.0,
+    #         min_obstacle_height: 0.0,
+    #         inf_is_valid: false,
+    #     }
+    # scan3:
+    #     {
+    #         sensor_frame: base_left_cam_tf,
+    #         data_type: LaserScan,
+    #         topic: /img_to_laser_left/lane_scan_left,
+    #         marking: true,
+    #         clearing: true,
+    #         observation_persistence: 60,
+    #         obstacle_range: 4.0,
+    #         raytrace_range: 8.0,
+    #         min_obstacle_height: 0.0,
+    #         inf_is_valid: false,
+    #     }
+    # scan4:
+    #     {
+    #         sensor_frame: base_right_cam_tf,
+    #         data_type: LaserScan,
+    #         topic: /img_to_laser_mid/lane_scan_mid,
+    #         marking: true,
+    #         clearing: true,
+    #         observation_persistence: 60,
+    #         obstacle_range: 4.0,
+    #         raytrace_range: 8.0,
+    #         min_obstacle_height: 0.0,
+    #         inf_is_valid: false,
+    #     }
